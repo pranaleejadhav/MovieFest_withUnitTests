@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7LK-DY-H4v">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movies View Controller-->
+        <scene sceneID="ssH-R5-OkI">
+            <objects>
+                <viewController storyboardIdentifier="MoviesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7LK-DY-H4v" customClass="MoviesViewController" customModule="MovieFest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yVU-Dd-S4l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Film Fest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApK-bM-A92">
+                                <rect key="frame" x="106" y="20" width="163" height="59"/>
+                                <fontDescription key="fontDescription" name="Cochin-BoldItalic" family="Cochin" pointSize="37"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r6r-dZ-01b">
+                                <rect key="frame" x="16" y="87" width="343" height="560"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCellID" id="vFg-St-ljn" customClass="MovieCellTableViewCell" customModule="MovieFest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vFg-St-ljn" id="3RO-0G-ClB">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1003907336" green="0.21410035329999999" blue="0.69197295979999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="r6r-dZ-01b" secondAttribute="bottom" constant="20" symbolic="YES" id="24y-7a-x83"/>
+                            <constraint firstItem="ApK-bM-A92" firstAttribute="top" secondItem="irx-ET-Ecp" secondAttribute="top" id="Lyq-t9-Wbz"/>
+                            <constraint firstItem="r6r-dZ-01b" firstAttribute="top" secondItem="ApK-bM-A92" secondAttribute="bottom" constant="8" symbolic="YES" id="MAC-Rx-sBa"/>
+                            <constraint firstItem="r6r-dZ-01b" firstAttribute="centerX" secondItem="ApK-bM-A92" secondAttribute="centerX" id="QLx-9a-a2d"/>
+                            <constraint firstItem="irx-ET-Ecp" firstAttribute="bottom" secondItem="ApK-bM-A92" secondAttribute="bottom" constant="588" id="SHj-CL-h5G"/>
+                            <constraint firstItem="ApK-bM-A92" firstAttribute="leading" secondItem="irx-ET-Ecp" secondAttribute="leading" constant="106" id="d6W-JP-FVW"/>
+                            <constraint firstItem="r6r-dZ-01b" firstAttribute="leading" secondItem="yVU-Dd-S4l" secondAttribute="leadingMargin" id="h9r-Na-zrU"/>
+                            <constraint firstItem="ApK-bM-A92" firstAttribute="centerX" secondItem="yVU-Dd-S4l" secondAttribute="centerX" id="nzl-87-UEG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="irx-ET-Ecp"/>
+                    </view>
+                    <connections>
+                        <outlet property="dataService" destination="rj6-ba-0sx" id="hhM-KK-9am"/>
+                        <outlet property="tableView" destination="r6r-dZ-01b" id="7od-CZ-TMR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RHA-6g-uRf" sceneMemberID="firstResponder"/>
+                <customObject id="rj6-ba-0sx" userLabel="Movie " customClass="MovieLibraryDataService" customModule="MovieFest" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
