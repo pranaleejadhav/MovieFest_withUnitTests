@@ -1,2 +1,7 @@
 # MovieFest_withUnitTests
-Created a simple movies application and performed unit testing on it
+
+Movies Application shows a list of movies to be seen and seen by the user.
+Followed MVC Pattern for Project design.
+
+Performed test driven development on the application.
+
